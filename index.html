@@ -20,7 +20,7 @@
 
 
 
-        
+
         var val1, val2, result;
         function el(elId) {
             return document.getElementById(elId)
@@ -28,15 +28,24 @@
 
         console.log(el("btnSum")); //Mostrar no console (teste da função el)
 
-        el("btSum").onclick = sum;
+        el("btnSum").onclick = sum;
 
-    function sum() {
-        val1 = parseFloat(el("val1").value)
+        function sum() {
+            val1 = parseFloat(el('val1').value);
+            val2 = parseFloat(el('val2').value);
 
-        
+            console.log(val1, val2);
 
-    }
-        
+           // if(notNumber(val, val2)) return false;
+            result = val1 + val2;
+            
+            //Pq a string e não a variável direto?
+            el('result').value = result;
+
+
+
+        }
+
 
 
     </script>
